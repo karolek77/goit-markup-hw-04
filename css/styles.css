@@ -92,11 +92,14 @@ a {
 /* ^^^^^^^^^^^^^^^^^^^^^ header ^^^^^^^^^^^^^^^^^^^^^*/
 
 /* ######### ######## ###### main ###### ######## ######### */
-
 .hero {
+  background-image: url("../images/img10.jpg");
+  background-size: cover;
+  background-color: var(--background-color);
+}
+.hero-headline {
   padding-top: 94px;
   padding-bottom: 94px;
-  background-color: var(--background-color);
 }
 
 .head-btn {
@@ -143,11 +146,20 @@ a {
 .advantages {
   display: flex;
   max-width: 1170;
+
   margin: 0 auto;
   padding: 0 15px;
   justify-content: space-between;
   padding-top: 94px;
 }
+.box-icon {
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px 25px 100px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+}
+
 .info h4 {
   margin: 0;
   padding-bottom: 10px;
@@ -155,7 +167,7 @@ a {
 .info {
   max-width: 270px;
   margin: 0;
-  height: 101px;
+  height: 251px;
 }
 
 .text-title {
@@ -196,8 +208,10 @@ a {
   margin-bottom: 50px;
 }
 /* ######## ######## section 4 title-card ######## ######## */
-.team {
+.section-team {
   background-color: #f5f4fa;
+}
+.team {
   padding-bottom: 94px;
   padding-top: 94px;
 }
@@ -319,13 +333,15 @@ img {
   margin-bottom: 0;
 }
 /* ######### ######## ###### footer ###### ######## ######### */
+footer {
+  background-color: var(--background-color);
+}
 .foot-link {
   display: flex;
   padding-left: 15px;
   flex-direction: column;
 
   height: 252px;
-  background-color: var(--background-color);
 }
 address > ul {
   list-style: none;
