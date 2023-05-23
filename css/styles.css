@@ -46,7 +46,7 @@ a {
   display: flex;
 }
 .contact-link:last-child {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 .contact-link:first-child {
   margin-left: 276px;
@@ -85,9 +85,27 @@ a {
   letter-spacing: 0.02em;
 }
 
+.contact-links {
+  display: flex;
+  align-items: center;
+}
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .contact-link:hover,
 .contact-link:focus {
   color: var(--Selection-color);
+}
+.contact-link:hover .contact-icon,
+.contact-link:focus .contact-icon {
+  fill: var(--Selection-color);
+}
+.contact-icon {
+  margin-right: 10px;
+  fill: #757575;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^ header ^^^^^^^^^^^^^^^^^^^^^*/
 
@@ -249,20 +267,79 @@ a {
   border-radius: 0px 0px 4px 4px;
   margin: 0;
   width: 270px;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
 }
-/*social-icon*/
 
+/*social-icon*/
+ul {
+  list-style: none;
+}
 .icon-social {
   display: flex;
   gap: 10px;
-  padding: 0 32px 18px 32px;
-}
-.social-icon {
-  width: 44px;
-  height: 44px;
-  padding: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px 30px 32px;
 }
 
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.social-icon {
+  fill: #afb1b8;
+}
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: #ffffff;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background: var(--Selection-color);
+}
+
+/* ######### ######## ###### section icon client ###### ######## ######### */
+.title-client {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 94px;
+}
+.client-list {
+  display: flex;
+  list-style: none;
+  margin: 50px 0 0 0;
+  padding: 0 15px 94px 15px;
+  justify-content: space-between;
+}
+.icon-client {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.icon-client:hover,
+.icon-client:hover .icon-logo {
+  border-color: var(--Selection-color);
+  fill: var(--Selection-color);
+}
+.icon-logo {
+  fill: #afb1b8;
+}
+
+.icon-logo {
+  margin: 16px 32px 16px 32px;
+}
 /* ######### ######## ###### portfolio ###### ######## ######### */
 .projects {
   padding-top: 94px;
@@ -310,6 +387,7 @@ a {
   color: #ffffff;
   background-color: var(--Selection-color);
   border-color: var(--Selection-color);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
 }
 .card-set {
   display: flex;
@@ -320,6 +398,10 @@ a {
   padding-right: 15px;
   margin-top: 34px;
   margin-bottom: 0px;
+}
+.card-set > li:hover {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0 4px 4px 0 rgba(0, 0, 0, 0.06);
 }
 img {
   display: block;
@@ -353,9 +435,10 @@ footer {
 .foot-link {
   display: flex;
   padding-left: 15px;
-  flex-direction: column;
-
-  height: 252px;
+  align-items: baseline;
+}
+.foot-contain {
+  padding: 60px 0;
 }
 address > ul {
   list-style: none;
@@ -395,7 +478,7 @@ address > ul {
 }
 
 .contact-nr:hover,
-.contact-nr:focus {
+.contact-nr:focus .box-icon-foot:hover {
   color: var(--Selection-color);
 }
 
@@ -405,15 +488,57 @@ address > ul {
   font-weight: 700;
   font-size: 26px;
   background-color: var(--background-color);
-  margin-top: 60px;
-  margin-bottom: 20px;
 }
 .link-contact {
   margin-bottom: 9px;
+  margin-top: 20px;
 }
 .email-contact {
   margin-bottom: 9px;
 }
 address {
   font-style: normal;
+}
+/* ########## footer social icon #########*/
+.list-icon-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: auto;
+}
+.title-icon-footer {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.icon-social-footer {
+  margin-left: 80px;
+}
+.foot-icon {
+  fill: #ffffff;
+  margin: 12px;
+}
+.box-icon-foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-icon-foot {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.social-link-footer {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social-link-footer:hover {
+  background: var(--Selection-color);
 }
